@@ -7,7 +7,9 @@
 #'@param exclude
 #'@author J.-F. Rami \email{rami@@cirad.fr}
 #'@examples
-#'make.conv(mapp = genom,mapg = p118.genet, exclude = "SB_06_045")
+#'data(sorgho_p118)
+#'genomv2<-as.map(genomv2.df)
+#'p118.conv<-make.conv(mapp = genomv2,mapg = p118.genet, exclude = "SB_06_045")
 #'
 make.conv<-function(mapp,mapg,exclude=NULL){
   nchr<-length(mapp)

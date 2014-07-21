@@ -5,7 +5,6 @@
 #'@param a a vector of length 2 with chromosome and position in bp as elements
 #'@param a conv object as constructed by make.conv
 #'@author J.-F. Rami \email{rami@@cirad.fr}
-#'@examples
 #'
 #'
 cM.pos<-function(a,conv){

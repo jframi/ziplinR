@@ -1,3 +1,13 @@
+#'Convert a map from a 3 columns data.frame to a map object
+#'
+#'Convert a map from a 3 columns data.frame to a map object
+#'
+#'@param x a 3 columns data.frame with marker names, chromosome, and position
+#'@author J.-F. Rami \email{rami@@cirad.fr}
+#'@examples
+#'data(sorgho_p118)
+#'genonmv2<-as.map(genomv2.df)
+
 as.map<-function(x){
   map<-x
   mnames <- map[,1]

@@ -1,9 +1,11 @@
-Package: cMconverter
+Package: cMconvertR
 Type: Package
-Title: What the package does (short line)
+Title: Convert physical distance to genetic distances based on a reference genetic map
 Version: 1.0
 Date: 2014-06-23
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: J.-F. Rami
+Maintainer: rami@cirad.fr
+Author: J.F. Rami <rami@cirad.fr>
+Maintainer: J.F. Rami <rami@cirad.fr>
+Description: Convert physical distance to genetic distances based on a reference genetic map
+License: GPL version 2 or later
