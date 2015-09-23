@@ -4,10 +4,12 @@
 \alias{as.map}
 \title{Convert a map from a 3 columns data.frame to a map object}
 \usage{
-as.map(x)
+as.map(x, order = T)
 }
 \arguments{
 \item{x}{a 3 columns data.frame with marker names, chromosome, and position}
+
+\item{order}{whether loci should be ordered by position in each chromosome. If FALSE, the order of original file is kept}
 }
 \description{
 Convert a map from a 3 columns data.frame to a map object
