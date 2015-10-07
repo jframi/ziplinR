@@ -2,24 +2,24 @@
 % Please edit documentation in R/make.conv.R
 \name{make.conv}
 \alias{make.conv}
-\title{Constuctor for a conv object}
+\title{Constuctor for a conversion list}
 \usage{
-make.conv(mapp, mapg, exclude = NULL)
+make.conv(map1, map2, exclude = NULL)
 }
 \arguments{
-\item{mapp}{}
+\item{map1}{}
 
-\item{mapg}{}
+\item{map2}{}
 
 \item{exclude}{}
 }
 \description{
-Constuctor for a conv object
+Constuctor for a conversion list
 }
 \examples{
 data(sorgho_p118)
 genomv2<-as.map(genomv2.df)
-p118.conv<-make.conv(mapp = genomv2,mapg = p118.genet, exclude = "SB_06_045")
+p118.conv<-make.conv(map1 = genomv2,map2 = p118.genet, exclude = "SB_06_045")
 }
 \author{
 J.-F. Rami \email{rami@cirad.fr}

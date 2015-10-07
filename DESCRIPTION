@@ -1,11 +1,11 @@
-Package: cMconvertR
+Package: ziplinR
 Type: Package
-Title: Convert physical distance to genetic distances (and vice versa) based on a reference genetic map
-Version: 1.1
+Title: Project map positions from one reference map to another based on common markers
+Version: 2.1
 Date: 2014-06-23
 Author: J.-F. Rami
 Maintainer: rami@cirad.fr
 Author: J.F. Rami <rami@cirad.fr>
 Maintainer: J.F. Rami <rami@cirad.fr>
-Description: Convert physical distance to genetic distances based on a reference genetic map
+Description: Project map positions from one reference map to another based on common markers
 License: GPL version 2 or later
