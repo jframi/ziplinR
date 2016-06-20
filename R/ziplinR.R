@@ -16,7 +16,7 @@
 #'#create a new dummy map
 #'newmap<-as.map(data.frame(mk=paste("m",1:1000,sep=""),chr=c(rep(1,500),rep(2,500)),Pos=round(c(sort(runif(n=500,min=1,max=1e8)),sort(runif(n=500,min=1,max=1e8))),0)))
 #'newmap.genet<-ziplinR(map=newmap,map1=genomv2,map2=p118.genet,exclude = "SB_06_045",shift.extrem = T)
-ziplinR<-function(map, map1, map2, named.chr=F, map2tomap1 = F, shift.extrem=T,exclude=NULL){
+ziplinR<-function(map, map1, map2, named.chr=T, map2tomap1 = F, shift.extrem=T,exclude=NULL){
   if (!map2tomap1){
     conv<-make.conv(map1=map1,map2=map2,exclude=exclude)
   } else{
@@ -24,11 +24,18 @@ ziplinR<-function(map, map1, map2, named.chr=F, map2tomap1 = F, shift.extrem=T,e
   }
   if (!named.chr){
     nchr<-length(map)
+    if (nchr!=length(map1)) stop("map must have the same number of chromosomes as map1 and map2 when named.chr=F")
     map.cm<-lapply(1:nchr,function(a)
       sapply(map[[a]], function(b)
                new.pos(a = c(a,b),conv)
         )
       )    
+  }else{
+    map.cm<-lapply(match(names(map),names(map1)),function(a){
+      sapply(map[[which(names(map)==a)]], function(b)
+        new.pos(a = c(a,b),conv)
+      )}
+    )
   }
   names(map.cm)<-names(map)
   if (shift.extrem){
