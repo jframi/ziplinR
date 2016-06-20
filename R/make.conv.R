@@ -34,12 +34,23 @@
 
 make.conv<-function(map1,map2,exclude=NULL){
   nchr<-length(map1)
+  #check map1 and map2 have same length
+  if (!length(map1)==length(map2)){
+    stop("map1 and map2 must have the same number of chromosomes")
+  }
+  #check chromosomes names identical between map1 and map2
+  if (!all(names(map1)%in%names(map2))){
+    stop("map1 and map2 must have the same chromosomes names")
+  }
   if (!is.null(exclude)){
     map1<-lapply(map1,function(a) a[!names(a)%in%exclude])
     map2<-lapply(map2,function(a) a[!names(a)%in%exclude])
   }
   map1<-lapply(map1,function(a) a[names(a)%in%unlist(lapply(map2,names))])
   map2<-lapply(map2,function(a) a[names(a)%in%unlist(lapply(map1,names))])
+  if (!all(unlist(lapply(map1,length))==unlist(lapply(map2,length)))){
+    stop(paste0("Some loci did not match on the following chromosomes: \n",paste(c("Map1 on Map2:",sapply(1:nchr,function(a) paste(a,sep=": ",lapply(map1,names)[[a]][which(!lapply(map1,names)[[a]]%in%lapply(map2,names)[[a]])]))),collapse="\n"),paste(c("Map2 on Map1:",sapply(1:nchr,function(a) paste(a,sep=": ",lapply(map2,names)[[a]][which(!lapply(map2,names)[[a]]%in%lapply(map1,names)[[a]])]))),collapse="\n")))
+  }
   map1.interv<-lapply(map1,function(a) data.frame(p1=head(a,-1),p2=a[-1]))
   map2.interv<-lapply(map2,function(a) data.frame(g1=head(a,-1),g2=a[-1]))
   conv<-lapply(1:nchr,function(a) data.frame(map2.interv[[a]],map1.interv[[a]]))
