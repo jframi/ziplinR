@@ -9,3 +9,4 @@ Author: J.F. Rami <rami@cirad.fr>
 Maintainer: J.F. Rami <rami@cirad.fr>
 Description: Project map positions from one map to another based on common markers
 License: GPL version 2 or later
+LazyData: true
