@@ -1,7 +1,7 @@
 Package: ziplinR
 Type: Package
 Title: Project map positions from one map to another based on common markers
-Version: 2.1
+Version: 2.1.1
 Date: 2014-06-23
 Author: J.-F. Rami
 Maintainer: rami@cirad.fr

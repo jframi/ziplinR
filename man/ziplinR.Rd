@@ -4,7 +4,7 @@
 \alias{ziplinR}
 \title{The main function to project positions from one map to another}
 \usage{
-ziplinR(map, map1, map2, named.chr = F, map2tomap1 = F, shift.extrem = T,
+ziplinR(map, map1, map2, named.chr = T, map2tomap1 = F, shift.extrem = T,
   exclude = NULL)
 }
 \arguments{

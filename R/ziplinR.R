@@ -31,9 +31,11 @@ ziplinR<-function(map, map1, map2, named.chr=T, map2tomap1 = F, shift.extrem=T,e
         )
       )    
   }else{
-    map.cm<-lapply(match(names(map),names(map1)),function(a){
-      sapply(map[[which(names(map)==a)]], function(b)
-        new.pos(a = c(a,b),conv)
+    nchr<-length(map)
+    map.cm<-lapply(1:nchr,function(a){
+      chr<-match(names(map)[a],names(map1))
+      sapply(map[[a]], function(b)
+        new.pos(a = c(chr,b),conv)
       )}
     )
   }
