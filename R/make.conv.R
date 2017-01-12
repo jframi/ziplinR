@@ -60,6 +60,7 @@ make.conv<-function(map1,map2,exclude=NULL){
   # Deactivate the following intended at dealing with chrom origin
   # will be handled bi cM.pos and ph.pos instead
   #conv<-lapply(conv,function(a) data.frame(a[,1:2]+(a[1,4]*a[1,5]),a[,3:5]))
-  #conv<-lapply(conv,function(a) data.frame(g1=c(0,a[-1,1]),a[,2:5]))                          
+  #conv<-lapply(conv,function(a) data.frame(g1=c(0,a[-1,1]),a[,2:5]))
+  conv<-lapply(conv, function(a) a[!is.infinite(a$ratio) & !is.nan(a$ratio),])
   return(conv)
 }
