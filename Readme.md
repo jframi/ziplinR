@@ -29,7 +29,7 @@ The package comes with 3 datasets:
 - genomv2 and genomv3 : are physical positions of ~1800 Kasp markers on sorghum genome v2 and v3 assemblies.
 
 The main function is the `ziplinR` function that projects positions from one map to the other.  
-The positions to be projected need to be formatted as a `map` object from the ![https://rqtl.org/](qtl) package using the `as.map` function.
+The positions to be projected need to be formatted as a `map` object from the [qtl](https://rqtl.org/) package using the `as.map` function.
 
 Let's build a data.frame with a couple of positions from 2 chromosomes. In real life, this data.frame would be obtained from a file using `read.table` or `data.table::fread`. The names of columns doesn't matter but the order does as explained in `?as.map`
 ```{r}
