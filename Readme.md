@@ -25,7 +25,7 @@ library(ziplinR)
 
 The package comes with 3 datasets:
 
-- p118genet : is a reference genetic map developed on a large (400 individuals) F3 population with 227 Kasp markers and used for QTL detection in the following papers : ![10.1016/j.jcs.2018.11.012](https://doi.org/10.1016/j.jcs.2018.11.012) and ![10.1016/j.fcr.2018.02.007](https://doi.org/10.1016/j.fcr.2018.02.007)  
+- p118genet : is a reference genetic map developed on a large (400 individuals) F3 population with 227 Kasp markers and used for QTL detection in the following papers : [10.1016/j.jcs.2018.11.012](https://doi.org/10.1016/j.jcs.2018.11.012) and [10.1016/j.fcr.2018.02.007](https://doi.org/10.1016/j.fcr.2018.02.007)  
 - genomv2 and genomv3 : are physical positions of ~1800 Kasp markers on sorghum genome v2 and v3 assemblies.
 
 The main function is the `ziplinR` function that projects positions from one map to the other.  
