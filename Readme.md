@@ -92,12 +92,14 @@ m
 #            6           140 
 ```
 
-This map can then be projected using two reference maps : - map1 : a map
-that has the the same reference frame as the the positions you are going
-to project (in the case you are projecting QTL positions, it will be the
-genetic map that has been used for QTL detection) - map2 : a map with a
-new reference frame (e.g physical map) and several (as many as possible)
-common markers with map1
+This map can then be projected using two reference maps :
+
+- map1 : a map that has the the same reference frame as the the
+  positions you are going to project (in the case you are projecting QTL
+  positions, it will be the genetic map that has been used for QTL
+  detection)
+- map2 : a map with a new reference frame (e.g physical map) and several
+  (as many as possible) common markers with map1
 
 **NB that chromosome names of map, map1 and map2 have to be same, ie
 “1”,“2”,…, “10” in this example.**
