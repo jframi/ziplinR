@@ -9,4 +9,4 @@ Description: Project map positions from one map to another based on common
     markers
 License: GPL version 2 or later
 LazyData: true
-RoxygenNote: 5.0.1
+RoxygenNote: 7.1.2
